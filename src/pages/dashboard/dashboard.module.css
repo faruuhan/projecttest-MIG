@@ -1,0 +1,50 @@
+.containerDashboard {
+  @apply grid gap-4 lg:gap-10;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "lokasi lokasi lokasi"
+    "profile profile profile"
+    "akunbank akunbank akunbank"
+    "relasi relasi relasi"
+    "aktifitas aktifitas aktifitas";
+}
+
+.lokasi {
+  grid-area: lokasi;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.akunBank {
+  grid-area: akunbank;
+}
+
+.relasi {
+  grid-area: relasi;
+}
+
+.aktifitas {
+  grid-area: aktifitas;
+}
+
+@media screen and (min-width: 768px) {
+  .containerDashboard {
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-areas:
+      "profile lokasi lokasi"
+      "profile akunbank akunbank"
+      "profile relasi relasi"
+      "profile aktifitas aktifitas";
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .containerDashboard {
+    grid-template-areas:
+      "profile lokasi lokasi"
+      "profile akunbank aktifitas"
+      "profile relasi aktifitas";
+  }
+}
